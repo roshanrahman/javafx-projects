@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple demonstration of SQLite3, used as a project for the Databases class in my college. It uses Sqlite3 as a database, and the GUI provides a means for the user to perform insertion, and view the database.
+This is a simple demonstration of SQLite3, using the Sqlite3 JDBC Driver, used as a project for the Databases class in my college. It uses Sqlite3 as a database, and the GUI provides a means for the user to perform insertion, and view the database.
 
 ## Screenshot
 
