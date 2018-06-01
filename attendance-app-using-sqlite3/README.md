@@ -10,7 +10,7 @@ This is a simple demonstration of SQLite3, using the Sqlite3 JDBC Driver, used a
 
 ## Usage
 
-__The JAR file can be found [here](out/artifacts/attendancedb_jar/attendancedb.jar)__
+__The JAR file can be found [here](https://github.com/roshanrahman/javafx-projects/raw/master/attendance-app-using-sqlite3/out/artifacts/attendancedb_jar/attendancedb.jar)__
 
 1. Select the date
 2. Click on "Mark Present" to insert the date into the database as "PRESENT"
