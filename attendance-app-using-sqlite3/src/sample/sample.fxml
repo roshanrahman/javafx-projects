@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vb" prefHeight="428.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <AnchorPane fx:id="dbchoice" prefHeight="825.0" prefWidth="357.0">
+         <children>
+            <Button layoutX="121.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleStoredDB" prefHeight="25.0" prefWidth="116.0" text="Stored DB" />
+            <Button layoutX="121.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleMemoryDB" prefHeight="25.0" prefWidth="116.0" text="In-memory DB" />
+            <Label layoutX="52.0" layoutY="124.0" text="What type of database do you wish to connect?" />
+         </children>
+      </AnchorPane>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TabPane prefHeight="400.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                        <Tab text="Operations">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <DatePicker fx:id="dateSelector" layoutX="132.0" layoutY="109.0" onAction="#handleDate">
+                                            <tooltip>
+                                                <Tooltip text="Select the date using this component" />
+                                            </tooltip>
+                                        </DatePicker>
+                                        <Button fx:id="presentButton" layoutX="93.0" layoutY="218.0" mnemonicParsing="false" onAction="#handlePresentButton" prefHeight="25.0" prefWidth="173.0" text="Mark Present" />
+                                        <Button fx:id="absentButton" layoutX="93.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleAbsentButton" prefHeight="25.0" prefWidth="173.0" text="Mark Absent" />
+                                        <Label layoutX="53.0" layoutY="113.0" text="Select Date:" />
+                                        <Label fx:id="statusLabel" layoutX="133.0" layoutY="183.0" text="Date not selected" />
+                                        <Label layoutX="32.0" layoutY="27.0" text="Attendance Application using SQLite">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab onSelectionChanged="#handleRecordView" text="Record View">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                              <Button layoutX="291.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshView" text="Refresh" />
+                                        <TextArea fx:id="recordView" layoutX="37.0" layoutY="49.0" prefHeight="100.0" prefWidth="357.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
